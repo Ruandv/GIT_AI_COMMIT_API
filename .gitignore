@@ -1,0 +1,12 @@
+node_modules
+dist
+temp
+.vscode
+.idea
+.env
+public/logging/**/*.*
+public/history.json
+public/vectorStore
+src/audio/**/*.*
+src/history/**/*.*
+diff/**/*.*
