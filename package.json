@@ -1,7 +1,7 @@
 {
   "name": "git-ai-commit-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ai commit api",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
