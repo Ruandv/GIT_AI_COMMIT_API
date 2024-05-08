@@ -39,6 +39,7 @@ class LLMService {
                     You need to generate a detailed conventional commit message with a subject body and footer for the changes that can be used as a commit message. 
                     
                     Here is an example of a diff file: 
+                    """"""
                     diff --git a/client/src/views/Home.vue b/client/src/views/Home.vue
                     index 71f02e8..3559591 100644
                     --- a/client/src/views/Home.vue
@@ -50,12 +51,13 @@ class LLMService {
                          -  fill: #54e8dd;
                          +  fill: #54e80d;
                     }}
-                     
-                    and the output should look like this: 
-
+                    """"""
+                    and the output should look like this:
+                    """"""
                     chore : changed color value 
                      
                     Changed the color value for the svg fill parameter.
+                    """"""
                 `;
 
         const prompt = GitCommitMessageChatPrompt;
@@ -102,8 +104,8 @@ class LLMService {
                 language: request.config?.language ?? 'english',
                 chat_history: executor.history
             });
-
-            return response.output;
+            response.output = response.output.replace(/\n/g, '\n# ');
+            return "# " + response.output;
         } catch (err) {
             logger.error(err);
             throw err;
