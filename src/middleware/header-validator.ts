@@ -4,6 +4,7 @@ import { StatusCodes } from 'http-status-codes';
 
 export const headerValidationHandler: RequestHandler = async (req, res, next) => {
   logger.info(['Request headers', req.headers]);
+  logger.info(['Request headers', req.headers]);
 
   if (req.method !== 'GET' && req.headers['x-secret'] === undefined) {
     logger.error('Request is missing the x-secret header');
