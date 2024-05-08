@@ -96,7 +96,6 @@ class LLMService {
         try {
             // check if you have an executor for the request.historyId
             var executor = this.createExecutor();
-
             var myExec = executor.executor;
             var response = await myExec.invoke({
                 text: request.prompt,
