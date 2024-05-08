@@ -10,3 +10,5 @@ public/vectorStore
 src/audio/**/*.*
 src/history/**/*.*
 diff/**/*.*
+*.log
+tsconfig.tsbuildinfo
