@@ -14,7 +14,6 @@ export const headerValidationHandler: RequestHandler = async (req, res, next) =>
   }
   else {
     const xSecret = req.headers['x-secret'] as string;
-    debugger;
     if (process.env.CLI_SECRET_TOKENS?.split(",").includes(xSecret)) {
       next();
     }

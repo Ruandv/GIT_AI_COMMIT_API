@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  git-ai-commit-api:
+    image: git-ai-commit-api
+    restart: always
