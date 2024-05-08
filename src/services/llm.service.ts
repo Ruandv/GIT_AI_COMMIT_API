@@ -110,7 +110,7 @@ class LLMService {
                 chat_history: executor.history
             });
             response.output = response.output.replace(/\n/g, '#\n ');
-            return "# " + response.output;
+            return "# " + response.output.tolowerCase();
         } catch (err) {
             logger.error(err);
             throw err;
