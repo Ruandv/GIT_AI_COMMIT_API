@@ -109,7 +109,7 @@ class LLMService {
                 language: request.config?.language ?? 'english',
                 chat_history: executor.history
             });
-            response.output = response.output.replace(/\./g, '\n ');
+            response.output = response.output.replace(/\n/g, '#\n ');
             return "# " + response.output;
         } catch (err) {
             logger.error(err);
