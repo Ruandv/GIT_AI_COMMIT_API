@@ -11,4 +11,4 @@ src/audio/**/*.*
 src/history/**/*.*
 diff/**/*.*
 *.log
-*.tsbuildinfo
+./*.tsbuildinfo
